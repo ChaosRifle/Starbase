@@ -1,0 +1,11 @@
+ON="origin_north" OS="origin_south" OE="origin_east" OW="origin_west"
+:LA = 180 :TM = ON x = 0 inv = 1000000
+IF :SG == ON THEN x++ IF x < 5 THEN goto 3 END ELSE goto 3 END
+:north = inv - :SS x = 0 :TM = OS
+IF :SG == OS THEN x++ IF x < 5 THEN goto 5 END ELSE goto 5 END
+:south = inv - :SS x = 0 :TM = OE
+IF :SG == OE THEN x++ IF x < 5 THEN goto 7 END ELSE goto 7 END
+:east = inv - :SS x = 0 :TM = OW
+IF :SG == OW THEN x++ IF x < 5 THEN goto 9 END ELSE goto 9 END
+:west = inv - :SS x = 0 :TM = ON
+:vertical = :north - :south :horizontal = :east - :west goto 3

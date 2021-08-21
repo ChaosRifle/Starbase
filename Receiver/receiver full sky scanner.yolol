@@ -1,0 +1,8 @@
+//this will only detect 1 degree angles in the sky at best, and would need to be modified to A+=0.1 or 0.01 etc to get more granularity for longer ranges.
+
+if :Sig == 0 then :RecPitch++ else goto 8 end
+if :RecPitch == 359 then :RecYaw++ :RecPitch = 0 end goto 3
+
+
+
+if :Sig == 0 then goto 3 else goto 8 end
