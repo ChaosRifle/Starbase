@@ -1,0 +1,9 @@
+ //v1.0
+IF:PS THEN goto7 END IF:YS THEN goto8 END IF:RS THEN goto9 END goto 2
+
+
+
+
+:PLMax+=:PS :PLMin-=:PS :Pitch_Sensitivity=:PLMax goto2+5*(:PS!=0)
+:YLMax+=:YS :YLMin-=:YS :Yaw_Sensitivity=:YLMax goto2+6*(:YS!=0)
+:RLMax+=:RS :RLMin-=:RS :Roll_Sensitivity=:RLMax goto2+7*(:RS!=0)
