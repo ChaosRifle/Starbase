@@ -5,7 +5,7 @@ endY = 522
 x = 0
 y = 0
 
-Pause::Suspend; will pause all input and restore use of default keys while paused
+Pause::Suspend ; will pause all input and restore use of default keys while paused
 
 numpad4::
   loop{
@@ -24,7 +24,7 @@ numpad4::
     MouseMove, endX, endY, 1
     sleep 50
     click, up
-    sleep 10
+    sleep 20
 
     x++
   }
