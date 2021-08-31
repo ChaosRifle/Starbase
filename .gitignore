@@ -1,0 +1,2 @@
+#ignore language server logs from VScode
+language-server-log.txt
