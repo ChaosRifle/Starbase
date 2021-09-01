@@ -1,2 +1,1 @@
-#ignore language server logs from VScode
-ignore/*.txt
+*.txt
