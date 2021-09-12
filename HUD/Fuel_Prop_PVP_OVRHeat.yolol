@@ -1,0 +1,6 @@
+
+IF :Propellant<1000000 THEN :PropLow=1 ELSE :PropLow=0 END //v1.0
+FCC=:FuelChamberFuel1+:FuelChamberFuel2+:FuelChamberFuel3:FuelChamber4
+FCC+=:FuelChamberFuel5+:FuelChamberFuel6
+IF FCC<300000 THEN :FuelLow=1 ELSE :FuelLow=0 END
+IF :insidesafezone == 0 THEN :PVP = 1 ELSE :PVP = 0 END goto2

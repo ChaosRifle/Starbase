@@ -1,0 +1,2 @@
+// name chipwait to "TRCW" to be pausable by ore collector  //v1.0 
+:Scan_Fuel = (:Propellant/2700)/60+" minutes remaining" goto 2

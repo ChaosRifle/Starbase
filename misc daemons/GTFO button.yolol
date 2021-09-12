@@ -1,0 +1,3 @@
+//v1.0 :ChipWait for your generator script needs to be :GeneratorWait now for GTFO mode
+IF :GTFO THEN :GeneratorWait=-1 goto3 ELSE :GeneratorWait=0 goto2 END
+:Cha=100 :Turtle=0 :MMode=0 goto2
