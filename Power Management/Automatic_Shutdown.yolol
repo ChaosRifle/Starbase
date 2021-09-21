@@ -1,9 +1,0 @@
-A = 6 M = 40 H = 80 y=100 x=0  //v1.4                                 Replace normal gen script here, update MFC switch to be :PowerGuard and rename label panel below to "Power Mode  PowerGuard"
-IF :PowerGuard == -1 THEN goto4 END
-x++ IF :FcuForward OR :Laser THEN goto9 END IF x>150 THEN goto8 END
-IF :PSw==1 THEN goto 7 ELSE IF :PSw==0 THEN goto 6 ELSE goto 5 END END
-:Cha = A*(y-(:Bat/y)) goto 2
-bt = A*(y-(:Bat/y)) IF bt<M THEN :Cha=M ELSE :Cha=bt END goto 2
-bt = A*(y-(:Bat/y)) IF bt<H THEN :Cha=H ELSE :Cha=bt END goto 2
-x=0 :PSw = -1 goto4
-x=0 goto4

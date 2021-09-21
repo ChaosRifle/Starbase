@@ -1,4 +1,0 @@
-attack = 4 //sets the ammount of battery to keep, if 1 then is inversly porportional to the battery level. if 4, will be at 100% genny at 25% lost battery
-:Generator = attack * (100-(:Battery_1/100)) goto 2
-//where :Generator is FuelChamberUnitRateLimit and :Battery_1 is StoredBatteryPower
-//you can change attack to make it try to keep more of the battery full

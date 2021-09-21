@@ -1,9 +1,0 @@
-A = 6 M = 40 H = 100//goto 8+:PSw preferred to fail safe to line 7
-IF :PSw==1 THEN goto 9 ELSE IF :PSw==0 THEN goto 8 ELSE goto 7 END END
-
-
-
-
-:Gen = A*(100-(:Bat/100)) goto 2
-bt = A*(100-(:Bat/100)) IF bt<M THEN :Gen=M ELSE :Gen=bt END goto 2
-bt = A*(100-(:Bat/100)) IF bt<H THEN :Gen=H ELSE :Gen=bt END goto 2 //:Gen = 100 goto 2
