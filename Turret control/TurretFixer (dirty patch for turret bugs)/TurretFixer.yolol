@@ -2,6 +2,7 @@
 //I HIGHLY recommend you set your other turret scripts to 
 //self chipwait on line 1 for ship initialization, it will do wonders
 
+//Set Y#/P# variables to your turret pitch/yaw
 
 
 
@@ -15,6 +16,5 @@
 
 
 :Y1=0 :Y2=0 :Y3=0 :Y4=0 :P1=0 :P2=0 :P3=0 :P4=0
-
 
 goto 20
