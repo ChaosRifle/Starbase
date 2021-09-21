@@ -1,8 +1,0 @@
-:LA = 5 :RY = -25 :RP = -25
-if :RP < 25 then if :SG!=0 then goto 8 else :RP++ goto 2 end end
-:RP = -25 :RY++
-t++ if t<20 then goto 4 else if :RY>25 then goto 5 else goto 2 end end
-:RY = -25 t++ if t<20 then goto 5 else goto 2 end
-
-
-time++ if t<4 then goto 8 else goto 2 end
