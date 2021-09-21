@@ -1,2 +1,0 @@
-IF :Turtle == 1 THEN :FcuFLM = 20 ELSE :FcuFLM = 100 END //v1.1
-IF :Cruise == 1 THEN :FLCS = 0 ELSE :FLCS = 1000 END goto1
