@@ -1,0 +1,4 @@
+z=100 a=0.5 t=10 //v1.0
+IF :AutoApproach == 1 AND :R13 < 1000 THEN goto 3 END goto 2
+DS=a*((:R13-20)/t) IF DS>5 THEN FcuForward=5 ELSE FcuForward=DS END
+IF :R13 < 20 OR :R13 == 1000 THEN FcuForward = 0 goto 2 END goto 3

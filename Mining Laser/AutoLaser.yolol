@@ -1,0 +1,6 @@
+//v1.2
+IF :MMode THEN goto 5+:AutoLaser ELSE :MLon=0 goto2 END
+
+IF :Laser THEN :MLon=1 ELSE :MLon=0 END goto2
+goto2
+IF :R13<20 AND :RFCon AND :Laser THEN :MLon=1 ELSE :MLon=0 END goto2

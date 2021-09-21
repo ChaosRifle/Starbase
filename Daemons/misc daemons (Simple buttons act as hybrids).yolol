@@ -1,0 +1,3 @@
+IF :Turtle == 1 THEN :FcuFLM = 20 ELSE :FcuFLM = 100 END //v1.4
+IF :CollisionAvoid==1 THEN :CWCA=0 :RFon=1 ELSE :CWCA =-1 :RFon=0 END
+IF :Cruise == 1 THEN :FLCS = 0 ELSE :FLCS = 1000 END goto1

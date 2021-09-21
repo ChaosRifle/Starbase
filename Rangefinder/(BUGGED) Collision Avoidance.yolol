@@ -1,0 +1,10 @@
+k=1000 l=3000 u=6000 a=9000 :RFon = 1 goto 1 //v1.1
+IF (:R1+:R2+:R3+:R4+:R5+:R6+:R7+:R8+:R9)==a THEN :MrLvr=1 goto2 END
+:MrLvr=0 :Ff=0 :Fp=0 :Fy=0 :Fr=0 //:Fb=0 :Fh=0 :Fv=0
+IF :Fv THEN goto6 ELSE :Fv = :R1+:R2+:R3+:R4+:R5+:R6<6000*-100 END
+IF :Fv THEN ELSE :Fv = :R7+:R8+:R9<3000*100 END
+IF :Fh THEN goto8 ELSE :Fh = :R1 + :R4 + :R7 < 3000 * -100 END
+IF :Fh THEN ELSE :Fh = :R3 + :R6 + :R9 < 3000 * 100 END
+IF (:R1+:R2+:R3+:R4+:R5+:R6+:R7+:R8+:R9)<a THEN goto 4 END
+:Ff=:FcuForward :Fb=:FcuBackward :Fv=:FcuUpDown :Fh=:FcuRightLeft
+goto2

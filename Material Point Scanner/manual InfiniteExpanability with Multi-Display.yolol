@@ -1,0 +1,7 @@
+:ScReset=1 s=1728 k="kv\n" n="\n" c=600 //v1.1                        //CWTR == ChipWaitTimeRemaining
+IF :MMode AND :Laser == 0 THEN :ScAct = 1 ELSE :ScAct=0 goto 2 END
+IF :Scan THEN :CWTR=c goto 6 END IF :Mmode THEN goto 3 ELSE goto 2 END
+
+
+IF :ScInd<:ScR THEN str+=:Mat+n+(:ScVol/s)+n :ScInd++ goto6 END
+:Scan_Fuel = str :ScReset=1 str = "" goto 3

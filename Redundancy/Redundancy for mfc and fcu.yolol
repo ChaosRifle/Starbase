@@ -1,0 +1,12 @@
+f = 10000 //where T# is ThrusterCurrentThrust //v1.0
+IF :FcuForward > 0 AND :T1==0 AND :T2==0 AND :Fuel>fTHENgoto3ENDgoto2
+IF :T1==0 AND :T2==0 AND :T1==0 AND :T2==0 AND :T1==0 AND :T2==0
+
+
+
+
+
+
+
+
+

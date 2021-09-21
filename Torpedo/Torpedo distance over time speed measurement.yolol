@@ -1,0 +1,14 @@
+:S = (:RFD-d)*5 d=:RFD goto1 //v1.0
+
+
+
+
+
+
+
+
+//v1.2
+
+
+
+:Speed = (:MD - d) d = :MD  goto 10
