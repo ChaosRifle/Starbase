@@ -1,0 +1,39 @@
+H=6000 M=3000 L=1500 U=88 T=50 //v1.0
+goto10
+
+
+
+
+
+
+
+g=:GenUR x=((g>T)+(g>U)+(:Laser<1)) x=((x<=2)*x)+((x>2)*2) goto12+x*2
+
+:ColP = L
+:ColP = 0 :CwCollector=2 goto10
+:ColP = M
+:ColP = 0 :CwCollector=2 goto10
+:ColP = H
+:ColP = 0 :CwCollector=2 goto10
+goto10  
+//IF :Gen<60 AND :Laser THEN :ColP=L ELSE :ColP=H END :LbC=(:SLvr<1)*Z
+
+H=6000 M=3000 L=1500 U=88 T=50 //v1.0
+goto10
+
+
+
+
+
+
+
+g=:GenUR x=((g>T)+(g>U)+(:Laser<1)) goto12+x*2
+
+:ColP = L
+:ColP = 0 :CwCollector=2 goto10
+:ColP = M
+:ColP = 0 :CwCollector=2 goto10
+:ColP = H
+:ColP = 0 :CwCollector=2 goto10
+:ColP = H goto10  
+//IF :Gen<60 AND :Laser THEN :ColP=L ELSE :ColP=H END :LbC=(:SLvr<1)*Z
