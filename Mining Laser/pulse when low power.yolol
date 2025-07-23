@@ -1,0 +1,9 @@
+m=3000 //v1.0
+IF :Lase THEN :MLon=1 IF:Bank4<mTHENgoto4ENDELSE:MLon=0ENDgoto2
+
+:MLon=0 IF :Lase THEN IF :Bank4>m THEN:MLon=1 goto2END ELSE goto2 END
+IF :Lase THEN :MLon=1 IF :Bank4<m THEN goto4 END ELSE :MLon=0 ENDgoto2
+//MLon=mininglaseractive, lase=player button, Bank4=storedbatterypower
+//script will pulse lasers when power is low
+//I am pretty sure its more efficient to just turn some of the lasers
+//off but this was cooler.
