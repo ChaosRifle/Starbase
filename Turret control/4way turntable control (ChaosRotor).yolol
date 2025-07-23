@@ -1,0 +1,25 @@
+:Rotor=0 :Fbut=0 :Bbut=0 :Lbut=0 :Rbut=0 GOTO4//v1.31 ChaosRotor 4-way
+//github link later on so people can update if needed?
+:Rotor=180 GOTO3 //ERROR, one of the buttons broke.. locking to aft.  This can be removed if undesired by commenting the whole line out
+GOTO 4+:Fbut+(:Bbut*2)+(:Lbut*4)+(:Rbut*8)
+:Rotor=0 :FBut=0 :Bbut=0 :Lbut=0 :Rbut=0 GOTO4               //front
+:Rotor=180 :FBut=0 :Bbut=0 :Lbut=0 :Rbut=0 GOTO4             //back
+GOTO1  // USER ERROR, THEY INPUT: F + B
+:Rotor=-90 :FBut=0 :Bbut=0 :Lbut=0 :Rbut=0 GOTO4             //left
+GOTO1  // USER ERROR, THEY INPUT: L + F
+GOTO1  // USER ERROR, THEY INPUT: L + B
+GOTO1  // USER ERROR, THEY INPUT: L + F + B
+:Rotor=90 :FBut=0 :Bbut=0 :Lbut=0 :Rbut=0 GOTO4              //right
+GOTO1  // USER ERROR, THEY INPUT: R + F
+GOTO1  // USER ERROR, THEY INPUT: R + B
+GOTO1  // USER ERROR, THEY INPUT: R + F + B
+GOTO1  // USER ERROR, THEY INPUT: R + L
+GOTO1  // USER ERROR, THEY INPUT: R + L + F
+GOTO1  // USER ERROR, THEY INPUT: R + L + F + B                       
+GOTO1  // should never go to this line
+GOTO1  // should never go to this line
+
+::documentation::
+// :[LETTER]but == is one of the 4 buttons: [F]orward, [B]ackward, [L]eft, [R]ight.   should be configured to be buttonstyle=1
+// :Rotor == TurretRotation       intended to be set to max=180, min=0
+
