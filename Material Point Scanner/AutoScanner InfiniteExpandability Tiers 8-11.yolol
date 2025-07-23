@@ -1,0 +1,31 @@
+:ScReset=1 S=1728 K="kv\n" L="\n" F=15 U=30 B=60 TN=10000 Z=22 //v2.0
+goto10
+
+
+
+
+
+
+
+:TbP=Z st="" v=0 y=0 IF :Mat=="" THEN :Scan=1 END goto10+(:Mat>0)
+y=:ScVol st+=:Mat+L+(y/S)+L v+=y :ScInd++ goto11+(:ScInd>=:ScR)
+v/=TN t=8+(v>F)+(v>U)+(v>B) :Tier="  "+t+L+st :ScReset=1 st="" goto10
+goto10
+
+
+
+
+
+
+
+
+//old code for tier selection below
+y=0 goto13+(V>150000)+(V>300000)+(V>600000)
+:Material=L+"   Tier <9"+L+st :ScReset=1 st="" goto3 //T8
+:Material=L+"   Tier 9"+L+st :ScReset=1 st="" goto3 //T9
+:Material=L+"   Tier 10"+L+st :ScReset=1 st="" goto3 //T10
+:Material=L+"   Tier 11"+L+st :ScReset=1 st="" goto3 //T11
+
+
+
+//Mining Mode, ScInd, ScR Mat, ScVol, Scan, ScReset\

@@ -1,0 +1,81 @@
+sz=400000 n="\n" t1="\n» Tier 10 «\n" :SReset=1 k=" kv\n"//v1.0     sz=size t=tier c=redits m1=material1 v1=volume1
+st=" stacks\nTotal Value\n" cl="Calculating" s=1728 t="\n\n" ic="Ice"
+va="Valkite" aj="Ajatite" ch="Charodium" ba="Bastium" ae="Aegisium"
+ex="Exorium" nh="Nhurgite" vo="Vokarium" Pba=1376.038 :Results="\nHi!"
+Pvo=1548.037 Pic=1290.038 Pva=860.026 Pnh=4300.128 Pch=6020.179 
+Pex=6880.205 Pae=3956.115 Paj=Pva p="%\n" l=10 b="" 
+
+IF:Sr==0THEN:Ssc=1 c=cl :results=b r=b goto8END v1=:Sv m1=:Sm :Si=1
+v=:Sv m=:Sm IF v1+v>sz THEN t=t1 END m-=" Ore" m-=" Crystal" :Si=0
+r=t+m+n+((v/(v1+v))*100)+p+((v/s)/l*l)+st v1/=s v/=s :Results=r+c
+IF m1==ic THENc=Pic*v1 goto16 ELSE c=Pva*v1 IFm1==va THENgoto14ENDEND //set cost to that of valkite because valkite and ajatite are the same value
+IF m==ch THEN c+=Pch*v goto18 END IF m==vo THEN c+=Pvo*v goto18 END
+IF m==ex THEN c+=Pex*v ELSE c+=Pnh*v END goto18
+IF m==ba THEN c+=Pba*v goto18 END IF m==vo THEN c+=Pvo*v goto18 END
+IF m==ex THEN c+=Pex*v ELSE c+=Pae*v END goto18
+IF m==vo THEN c+=Pvo*v ELSE c+=Pnh*v END goto18
+
+t=n+n :Results=r+c goto 8
+
+
+:SReset=1 :Sa=1 c=100 k=1000  v=0 m="" l=m //v1.0
+IF:Sr==0THEN:Ss=1 goto2ENDv+=:Sv m=:Sm l+=m :Si++IF:Si<:SrTHENgoto2END
+:Ss=:Sr==0
+
+v+=:Sv m=:Sm l+=m :Si++goto2+(:Sr==:Si)
+
+
+IF v>360000000 THEN :worth=1 ELSE :worth=0 END :o=v+"\n"+m
+:CwR1=0 :CwMPS=-1 goto1
+
+
+
+
+
+
+c=100 k=1000 :Sa=1//v1.0
+/ set runtime chipwait to positive int to time 
+:Ss=1
+°²³×π①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰«»«
+v+=:Sv p=:Sv :Si++
+IF:Sr==0THEN:Ss=1 goto2ENDv+=:Sv m=:Sm l+=m :Si++IF:Si<:SrTHENgoto2END
+//p=p/v*c
+♥©¤™♡°²³×π①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮
+IF v>460000000 THEN :worth=1 ELSE :worth=0 END
+// set runtime chipwait to positive int to time out this op if failed
+
+
+
+
+
+
+a="Valkite"    va=860.026 
+b="Bastium"    vb=1376.038 
+c="Ajatite"    vc=va 
+d="Ice"        vd=1290.038 
+e="Vokarium"   ve=1548.037 
+f="Nhurgite"   vf=4300.128 
+g="Surtrite"   vg=6020.179 
+h="Charodium"  vh=6020.179 
+i="Exorium"    vi=6880.205 
+j="Lukium"     vj=13760.41 
+k="Arkanium"   vk=15480.461 
+l="Karnite"    vl=vi 
+m="Kutonium"   vm=12040.358 
+n="Aegisium"   vn=3956.115 
+o="Corazium"   vo=17200.512 
+p="Ymrium"     vp=vo 
+
+
+q="Xhalium" wq=10803.68
+
+
+
+
+ajatite =charo, vok, nhur, exorium
+valkite =basti, vok, aegis, exorium
+ice     =vok, nhur
+
+ajatite =charo, vok, nhur
+valkite =basti, aegis, exorium
+ice     =vok, nhur
