@@ -1,0 +1,19 @@
+d=":" k=1000 h=3600 m=60 pl=50000 o=:Pf t=pl*20 b=" " //v1.1
+p=:P/(:Pf-o) f=p/h/k*k s=(p-f*h)/m/k*k ps=(p-f*h-s*m)/k*k :PropSc=p
+p=f+d+s+d+ps IF:Pf-o THEN :PR=p ELSE :PR=b+:P END goto(:P<pl)*4+2
+goto2
+
+:P = 1000000  :PR = "  LOW PROPELLANT"
+:P = 1000000
+:P = 1000000
+IF :Pf-o THEN :PR=p ELSE :PR=b+:P END goto2
+goto2
+
+
+
+
+
+
+
+
+
