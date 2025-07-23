@@ -1,0 +1,37 @@
+z=11 w=20 q=19 c=0  //t=turn
+T=T<1 x=:G1+:G2+:G3+:G4+:G5+:G6+:G7+:G8+:G9 goto (x>8)*12+3
+:Gready=1 goto x!=(:G1+:G2+:G3+:G4+:G5+:G6+:G7+:G8+:G9)+3
+:Gready=0 B1=:G1+:G1c B2=:G2+:G2c B3=:G3+:G3c B4=:G4+:G4c B5=:G5+:G5c
+B6=:G6+:G6c B7=:G7+:G7c B8=:G8+:G8c B9=:G9+:G9c
+w1=B1+B2+B3 w2=B1+B5+B9 w3=B1+B4+B7 w4=B2+B5+B8
+w5=B3+B6+B9 w6=B3+B5+B7 w7=B4+B5+B6 w8=B7+B8+B9 
+goto (W1==3+W2==3+W3==3+W4==3+W5==3+W6==3+W7==3+W8==3)*7+9       //naturally mutually exclusive, but it should really be * not +
+goto (W1>11+W2>11+W3>11+W4>11+W5>11+W6>11+W7>11+W8>11)*7+10       //naturally mutually exclusive, but it should really be * not +
+:G1c=T*3*(:G1<1)+:G1c*:G1 :G2c=T*3*(:G2<1)+:G2c*:G2
+:G3c=T*3*(:G3<1)+:G3c*:G3 :G4c=T*3*(:G4<1)+:G4c*:G4
+:G5c=T*3*(:G5<1)+:G5c*:G5 :G6c=T*3*(:G6<1)+:G6c*:G6
+:G7c=T*3*(:G7<1)+:G7c*:G7 :G8c=T*3*(:G8<1)+:G8c*:G8
+:G9c=T*3*(:G9<1)+:G9c*:G9 goto2
+:TicTacBlink=1 goto18  //draw
+:Redwin++ T=1 :TicTacBlink=3 goto18  //red win
+:Bluewin++ T=0 :TicTacBlink=3 goto18  //blue win
+r=:RstTicSc :Bluewin*=r<1 :Redwin*=r<1 goto:rstTTT+18
+:G1=0 :G2=0 :G3=0 :G4=0 :G5=0 :G6=0 :G7=0 :G8=0 :G9=0 :TicTacBlink=0
+c=T*3 :G1c=c :G2c=c :G3c=c :G4c=c :G5c=c :G6c=c :G7c=c :G8c=c :G9c=c
+
+
+G1  G2  G3
+G4  G5  G6        == buttonstate config
+G7  G8  G9
+
+G1c  G2c  G3c
+G4c  G5c  G6c     == colour name config
+G7c  G8c  G9c
+
+RstTicSc    will reset scores
+Bluewin     is a scoreboard for blue
+Redwin      is a scoreboard for red
+rstTTT      will reset the board when a game has ended
+Gready      in an indicator for when the yolol is ready for an input
+
+All G# buttons need to have their ButtonEnableBlink named:  TicTacBlink
