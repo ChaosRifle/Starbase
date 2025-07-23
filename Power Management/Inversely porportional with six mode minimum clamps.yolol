@@ -1,0 +1,23 @@
+A=6 S1=10 S2=20 S3=30 S4=40  //v1.0                                 //config   
+goto7+:Pwr                                                            //S5=50 S6=60 S7=70 S8=80 S9=90  UNUSED
+:Gen=100 goto3
+
+
+
+:Gen = A*(100-((:Bat+1)/100)) goto7+:Pwr                              //off
+bt = A*(100-(:Bat/100)) :Gen=((bt<S1)*S1)+((bt>=S1)*bt) goto7+:Pwr    //thrusters only
+bt = A*(100-(:Bat/100)) :Gen=((bt<S2)*S2)+((bt>=S2)*bt) goto7+:Pwr    //CLF 1 on
+bt = A*(100-(:Bat/100)) :Gen=((bt<S3)*S3)+((bt>=S3)*bt) goto7+:Pwr    //CLF 2 on
+bt = A*(100-(:Bat/100)) :Gen=((bt<S4)*S4)+((bt>=S4)*bt) goto7+:Pwr    //CLF 3 on
+:Gen=100 goto7+:Pwr                                                   //full power UNUSED
+
+
+
+
+
+
+
+
+
+IFbt<H THEN :Gen=H ELSE :Gen=bt END
+:Gen=((bt<H)*H)+((bt>=H)*bt) //same as above, just more compact

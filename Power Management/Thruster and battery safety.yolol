@@ -1,0 +1,41 @@
+L=1500 //CLF PowerMan v1.0             //config
+
+
+
+s=:Bay1+:Bay2:+:Bay3 t=:Bat>L :T1=t*(s>0) :T2=t*(s>1) :T3=t*(s>2) :S=s 
+:Pwr = :Power + s                               goto5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:S     = optional public output of s
+s      = stage of thrust required
+t      = threshold of minimum battery level
+L      = lower limit a batteries are allowed to go to before it kicks the thrusters offline
+:Power = power button to toggle the ship on
+:Bay#  = respective cargo lock frame names
+:Pwr   = output to reactor script for reactor to automatically spool in response
+:T#    = network relays for thrusters
+
+:Bay1 :Bay2 :Bay3 :Pwr :Bat :T1 :T2 :T3
+
+
+
+
+
+
+
+
+
+
+
