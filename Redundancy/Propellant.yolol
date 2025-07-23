@@ -1,0 +1,20 @@
+t=20 n=-1 x=:CwForwardBackwardProp goto1                              //t=20 n=-1 :Flow1=0 :Flow2=0 :Flow3=0 :Flow4=0 :Flow5=0 :Flow6=0
+x=:CwForwardBackwardPropBackup goto2                                  //:Flow7=0 :Flow8=0 :Flow9=0 :Flow10=0 :Flow11=0 :Flow12=0 :Flow13=0
+x=:CwForwardBackwardPropBackup2 goto3                                 //:Flow14=0 :Flow15=0 
+x=:CwForwardBackwardPropBackup3 goto4                                 //
+goto5+:PropFail                                                       //:PropFail=1
+:FcuBackward=:FcuForward*n :Flow1=1 :PropFail=1 goto6+(:Prop1<t)
+:FcuBackward=:FcuForward*n :Flow2=1 :PropFail=2 goto7+(:Prop2<t)      //comments are for chip 1, remove a line from the backup lockouts
+:FcuBackward=:FcuForward*n :Flow3=1 :PropFail=3 goto8+(:Prop3<t)      //for each prior chip. Named Chipwaits should be the same as the
+:FcuBackward=:FcuForward*n :Flow4=1 :PropFail=4 goto9+(:Prop4<t)      //first four lines CwName values.  
+:FcuBackward=:FcuForward*n :Flow5=1 :PropFail=5 goto10+(:Prop5<t)
+:FcuBackward=:FcuForward*n :Flow6=1 :PropFail=6 goto11+(:Prop6<t)
+:FcuBackward=:FcuForward*n :Flow7=1 :PropFail=7 goto12+(:Prop7<t)
+:FcuBackward=:FcuForward*n :Flow8=1 :PropFail=8 goto13+(:Prop8<t)
+:FcuBackward=:FcuForward*n :Flow9=1 :PropFail=9 goto14+(:Prop9<t)
+:FcuBackward=:FcuForward*n :Flow10=1 :PropFail=10 goto15+(:Prop10<t)
+:FcuBackward=:FcuForward*n :Flow11=1 :PropFail=11 goto16+(:Prop11<t)
+:FcuBackward=:FcuForward*n :Flow12=1 :PropFail=12 goto17+(:Prop12<t)
+:FcuBackward=:FcuForward*n :Flow13=1 :PropFail=13 goto18+(:Prop13<t)
+:FcuBackward=:FcuForward*n :Flow14=1 :PropFail=14 goto19+(:Prop14<t)
+:FcuBackward=:FcuForward*n :Flow15=1 :PropFail=15 goto20+(:Prop15<t)  
