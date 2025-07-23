@@ -1,0 +1,19 @@
+T=10000
+IF :SingleLever THEN :FcuBackward=T*(:FcuForward<0) END goto2
+:FcuBackward=T*(:FcuForward<0) goto3
+goto3
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+

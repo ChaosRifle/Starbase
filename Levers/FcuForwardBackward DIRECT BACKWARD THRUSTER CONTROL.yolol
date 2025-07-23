@@ -1,0 +1,19 @@
+T=10000 N=-1
+x=:FcuForward IF :SingleLever THEN:FcuBackward=x*N*((x<0)*T) END goto2
+:FcuBackward=:FcuForward*-1 goto3
+goto3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
